@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/bg_grey"
+    >
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_toparea"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_margin_bigger"
+        >
+        <ImageView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_account"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/common_margin_bigger"
+            />
+        <LinearLayout 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+            <TextView 
+                android:id="@+id/tv_account_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎您，恢恢"
+                android:textSize="@dimen/textsize_big"
+                android:textColor="@color/textcolor_light"
+                />
+            <TextView 
+                android:id="@+id/tv_account_invite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的邀请码，不告诉您"
+                android:textSize="@dimen/textsize_desc"
+                android:textColor="@color/textcolor_light"
+                />
+            <TextView 
+                android:id="@+id/tv_account_counts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="领取奖品(1) 领取礼券(2) 抽奖次数(0)"
+                android:textSize="@dimen/textsize_desc"
+                android:textColor="@color/textcolor_lighter"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include 
+	    android:id="@+id/include_acct_1"
+	    layout="@layout/layout_linkbar"/>
+    <View style="@style/DividerWH" />
+    <include 
+	    android:id="@+id/include_acct_2"
+	    layout="@layout/layout_linkbar"/>
+    <View style="@style/DividerWH" />
+    <include 
+	    android:id="@+id/include_acct_3"
+	    layout="@layout/layout_linkbar"/>
+    <View style="@style/DividerWH" />
+    <include 
+	    android:id="@+id/include_acct_4"
+	    layout="@layout/layout_linkbar"/>
+    <View style="@style/DividerWH" />
+    <include 
+	    android:id="@+id/include_acct_5"
+	    layout="@layout/layout_linkbar"/>
+    <View style="@style/DividerWH" />
+    <include 
+	    android:id="@+id/include_acct_6"
+	    layout="@layout/layout_linkbar"/>
+    
+</LinearLayout>

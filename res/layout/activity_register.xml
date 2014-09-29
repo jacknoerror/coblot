@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin" >
+
+        <EditText
+            android:id="@+id/edit_regist_name"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="请输入您要注册的用户名" />
+
+        <EditText
+            android:id="@+id/edit_regist_pwd"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="请输入您的密码" />
+
+        <EditText
+            android:id="@+id/edit_regist_pwdagain"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="请再次输入您的密码" />
+
+        <EditText
+            android:id="@+id/edit_regist_realname"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="请输入您的真实姓名" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/edit_regist_card"
+                style="@style/CommonEdit"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/common_margin"
+                android:layout_weight="3"
+                android:hint="请输入您的证件号码" />
+
+            <Button
+                android:id="@+id/btn_checkcode"
+                style="@style/BtnPink"
+                android:layout_width="match_parent"
+                android:layout_weight="5" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_regist_checkcode"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="请输入您注册手机收到的验证码" />
+
+        <EditText
+            android:id="@+id/edit_regist_invite"
+            style="@style/CommonEdit"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:hint="如有邀请码，请填写" />
+
+        <Button
+            android:id="@+id/btn_goregist"
+            style="@style/BtnCyan"
+            android:text="注	册"
+            />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+    <include 
+        android:id="@+id/layout_faq_title"
+        layout="@layout/layout_linkbar"/>
+    <TextView 
+        android:id="@+id/tv_faq_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/textsize_desc"
+        android:textColor="@color/textcolor_light"
+        android:visibility="gone"
+        />
+
+</LinearLayout>

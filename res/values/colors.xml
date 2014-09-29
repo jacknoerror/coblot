@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_yellow_light">#FFFEDF</color>
+    <color name="bg_red_scarlet">#a00628</color>
+    <color name="bg_grey">#eeeeee</color>
+    <color name="border_grey">#d2d2d2</color>
+    <color name="bg_cyan">#31bcad</color>
+    <color name="bg_red_pink">#df2d71</color>
+    
+    <color name="textcolor_dark">#444444</color>
+    <color name="textcolor_light">#666666</color>
+    <color name="textcolor_lighter">#808080</color>
+    <color name="textcolor_lightest">#bababa</color>
+    <color name="textcolor_blue">#0067c4</color>
+    <color name="textcolor_yellow">#FFFF61</color>
+    
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+    <EditText
+        android:id="@+id/edit_addrmana_name"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入收件人姓名" />
+    <EditText
+        android:id="@+id/edit_addrmana_address"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入收件人地址" />
+    <EditText
+        android:id="@+id/edit_addrmana_phone"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入收件人联系电话" />
+
+    <EditText
+        android:id="@+id/edit_addrmana_zip"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入邮政编码" />
+    <CheckBox 
+	        android:id="@+id/check_rememberpwd"
+	        style="@style/TextBlue"
+	        android:layout_gravity="left"
+	        android:text="设为默认"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginBottom="@dimen/common_margin_bigger"
+	        />
+    
+    <Button
+            android:id="@+id/btn_godelete"
+            style="@style/BtnCyan"
+            android:text="删除收货地址"
+            />
+
+</LinearLayout>

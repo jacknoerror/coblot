@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bocclottery"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:name="com.bocclottery.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name="com.bocclottery.ui.HubActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity android:name="com.bocclottery.ui.StartActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.bocclottery.ui.settings.SettingActivity" >
+        </activity>
+        <activity android:name="com.bocclottery.ui.settings.FAQActivity" >
+        </activity>
+        <activity android:name="com.bocclottery.ui.tabs.account.SearchTradeActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.LoginActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.AddressAddActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.AddressManageActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.ChangePasswordActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.FindNameActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.FindPasswordActivity" />
+        <activity android:name="com.bocclottery.ui.tabs.account.RegisterActivity" />
+    </application>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:label="Testing"
+        android:targetPackage="com.bocclottery" />
+
+</manifest>

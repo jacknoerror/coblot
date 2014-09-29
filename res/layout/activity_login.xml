@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_grey"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin" >
+
+    <EditText
+        android:id="@+id/edit_loginname"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:drawableLeft="@drawable/ic_login"
+        android:drawablePadding="@dimen/common_margin"
+        android:hint="请输入您的用户名" />
+
+    <TextView
+        android:id="@+id/tv_forgotname"
+        style="@style/TextBlue"
+        android:layout_gravity="right"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/common_margin"
+        android:text="忘记账户？" />
+
+    <EditText
+        android:id="@+id/edit_loginpwd"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="@dimen/common_margin"
+        android:hint="请输入您的密码"
+        android:inputType="textPassword" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/common_margin" >
+
+        <CheckBox
+            android:id="@+id/check_rememberpwd"
+            style="@style/TextBlue"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="left"
+            android:text="记住密码" />
+
+        <TextView
+            android:id="@+id/tv_forgotpwd"
+            style="@style/TextBlue"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="忘记密码？" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_gologin"
+        style="@style/BtnCyan"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="登	录" />
+
+    <TextView
+        android:id="@+id/tv_goregist"
+        style="@style/TextBlue"
+        android:text="还没有账户？马上注册" 
+        android:layout_gravity="center"
+        />
+
+</LinearLayout>

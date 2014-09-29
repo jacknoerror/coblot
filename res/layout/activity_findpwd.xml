@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_grey"
+    android:padding="@dimen/activity_horizontal_margin" >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_findpwd_name"
+            style="@style/CommonEdit"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_weight="3"
+            android:hint="请输入您的用户名" />
+
+        <Button
+            android:id="@+id/btn_checkcode"
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            style="@style/BtnPink"
+            />
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edit_findpwd_pwd"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入您的新密码" />
+    <EditText
+        android:id="@+id/edit_findpwd_pwdagain"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请再次输入您的新密码" />
+
+    <EditText
+        android:id="@+id/edit_findpwd_checkcode"
+        style="@style/CommonEdit"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:hint="请输入您注册手机收到的验证码" />
+    <Button
+            android:id="@+id/btn_goregist"
+            style="@style/BtnCyan"
+            android:text="修改密码"
+            />
+
+</LinearLayout>
