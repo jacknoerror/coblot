@@ -2,14 +2,84 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-    android:background="#aaaaaa"
-    android:padding="@dimen/activity_horizontal_margin"
-    >
-    <EditText 
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@drawable/frame_anonymous1_1"
-        />
+    android:background="@color/bg_grey"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sidelonger" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_main"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_gravity="center" >
+        </android.support.v4.view.ViewPager>
+
+        <LinearLayout
+            android:id="@+id/layout_spots_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <FrameLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@android:color/white"
+	    >
+	    <ImageView 
+	        android:id="@+id/img_user_red"
+	        android:layout_width="10dp"
+	        android:layout_height="2dp"
+	        android:src="@color/bg_red_scarlet"
+	        />
+		<RadioGroup 
+	        android:id="@+id/radiogroup_usercenter"
+	        android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:gravity="center"
+		    android:layout_marginBottom="2dp"
+		    
+	        >
+	        
+	         <RadioButton 
+		        android:id="@+id/btn_user_rec"
+		        style="@style/AllWrap"
+		        android:layout_weight="1"
+		        android:button="@null"
+		        android:textColor="@color/textcolor_dark"
+		        android:text="111"
+		        />
+	         <RadioButton 
+		        android:id="@+id/btn_user_prz"
+		        style="@style/AllWrap"
+		        android:layout_weight="1"
+		        android:button="@null"
+		        android:text="222"
+		        android:textColor="@color/textcolor_dark"
+		        />
+	         <RadioButton 
+		        android:id="@+id/btn_user_rol"
+		        style="@style/AllWrap"
+		        android:layout_weight="1"
+		        android:button="@null"
+		        android:textColor="@color/textcolor_dark"
+		        android:text="333"
+		        />
+	    </RadioGroup>
+	</FrameLayout>
+	<android.support.v4.view.ViewPager
+	    android:id="@+id/viewpager_user"
+	    android:layout_width="match_parent"
+	    android:layout_height="0dp"
+	    android:layout_weight="1"
+	    >
+	</android.support.v4.view.ViewPager>
 
 </LinearLayout>

@@ -8,6 +8,7 @@
     <dimen name="height_title_bar">36dp</dimen>
     <dimen name="height_link_bar">50dp</dimen>
     <dimen name="height_toparea">105dp</dimen>
+    <dimen name="height_viewpager">150dp</dimen>
     <dimen name="round_corner">5dp</dimen>
     <dimen name="common_margin">4dp</dimen>
     <dimen name="common_margin_bigger">8dp</dimen>

@@ -11,6 +11,7 @@ import android.widget.ImageView.ScaleType;
 
 import com.bocclottery.R;
 import com.bocclottery.entity.MyEvent;
+import com.bocclottery.utils.ImageLoaderHelper;
 import com.bocclottery.utils.JackUtils;
 
 import de.greenrobot.event.EventBus;
@@ -40,10 +41,12 @@ public class StartActivity extends Activity {
 	public void onEventBackgroundThread(MyEvent event) {
 		if(event.equalsMsg("dosth")){
 			long starttime = System.currentTimeMillis();
-			// do sth XXX
+			//do sth
+			ImageLoaderHelper.initImageLoader(this);
+			
 			while(System.currentTimeMillis()-starttime<2000){
-				
 			}
+			
 			default1.post(new MyEvent("end"));
 		}
 	}

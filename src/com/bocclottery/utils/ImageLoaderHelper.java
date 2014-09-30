@@ -62,7 +62,7 @@ public class ImageLoaderHelper {
 		//  ImageLoaderConfiguration.createDefault(this);
 		// method.
 		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
-		.memoryCacheExtraOptions(180, 180)//taotao
+		.memoryCacheExtraOptions(256, 256)//taotao
 				.threadPriority(Thread.NORM_PRIORITY - 1)
 				.denyCacheImageMultipleSizesInMemory()
 				.discCacheFileNameGenerator(new Md5FileNameGenerator())
