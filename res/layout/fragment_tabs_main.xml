@@ -32,16 +32,23 @@
 	    android:layout_height="wrap_content"
 	    android:background="@android:color/white"
 	    >
+	    <View 
+	        android:layout_width="match_parent"
+	        android:layout_height="2dp"
+	        android:background="#dddddd"
+	        android:layout_gravity="bottom"
+	        />
 	    <ImageView 
 	        android:id="@+id/img_user_red"
 	        android:layout_width="10dp"
 	        android:layout_height="2dp"
-	        android:src="@color/bg_red_scarlet"
+	        android:src="@color/bg_red_pink"
+	        android:layout_gravity="bottom"
 	        />
 		<RadioGroup 
 	        android:id="@+id/radiogroup_usercenter"
 	        android:layout_width="match_parent"
-		    android:layout_height="wrap_content"
+		    android:layout_height="@dimen/height_link_bar"
 		    android:orientation="horizontal"
 		    android:gravity="center"
 		    android:layout_marginBottom="2dp"
@@ -50,27 +57,21 @@
 	        
 	         <RadioButton 
 		        android:id="@+id/btn_user_rec"
-		        style="@style/AllWrap"
+		        style="@style/RadioBtn_main"
 		        android:layout_weight="1"
-		        android:button="@null"
-		        android:textColor="@color/textcolor_dark"
-		        android:text="111"
+		        android:text="推荐活动"
 		        />
 	         <RadioButton 
 		        android:id="@+id/btn_user_prz"
-		        style="@style/AllWrap"
+		        style="@style/RadioBtn_main"
 		        android:layout_weight="1"
-		        android:button="@null"
-		        android:text="222"
-		        android:textColor="@color/textcolor_dark"
+		        android:text="奖品展示"
 		        />
 	         <RadioButton 
 		        android:id="@+id/btn_user_rol"
-		        style="@style/AllWrap"
+		        style="@style/RadioBtn_main"
 		        android:layout_weight="1"
-		        android:button="@null"
-		        android:textColor="@color/textcolor_dark"
-		        android:text="333"
+		        android:text="中奖名单"
 		        />
 	    </RadioGroup>
 	</FrameLayout>

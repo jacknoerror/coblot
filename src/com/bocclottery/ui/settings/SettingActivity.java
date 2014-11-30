@@ -22,12 +22,11 @@ public class SettingActivity extends Activity {
 		jwtMana.setComponent(JackTitleConst.CUSTOMTITLE_ID_MIDTEXT, getString(R.string.title_set));
 		jwtMana.setComponent(JackTitleConst.CUSTOMTITLE_ID_RIGHT1, false);
 		jwtMana.setComponent(JackTitleConst.CUSTOMTITLE_ID_RIGHT2, false);
-		jwtMana.initBackBtn();
+		jwtMana.initBackBtn(); 
 		
-		((TextView)findViewById(R.id.include_set_1).findViewById(R.id.tv_linkbar)).setText("如何注册");
-		((TextView)findViewById(R.id.include_set_2).findViewById(R.id.tv_linkbar)).setText("如何登录");
-		((TextView)findViewById(R.id.include_set_3).findViewById(R.id.tv_linkbar)).setText("如何找回用户名及找回密码");
-		((TextView)findViewById(R.id.include_set_4).findViewById(R.id.tv_linkbar)).setText("关于我们");
+		((TextView)findViewById(R.id.include_set_1).findViewById(R.id.tv_linkbar)).setText("版本更新");
+		((TextView)findViewById(R.id.include_set_2).findViewById(R.id.tv_linkbar)).setText("有奖调查");
+		((TextView)findViewById(R.id.include_set_3).findViewById(R.id.tv_linkbar)).setText("关于我们");
 		
 	}
 	

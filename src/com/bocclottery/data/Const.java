@@ -1,9 +1,8 @@
 package com.bocclottery.data;
 
-import com.qfc.yft.util.JackRexUtil.JackReRules;
 
 
-public class Const implements NetConst,JackReRules{
+public class Const implements NetConst{
 	
 	public static float SCREEN_WIDTH,SCREEN_HEIGHT;
 	

@@ -2,13 +2,13 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
+            backward-compatibility can go here.
         -->
     </style>
 
@@ -21,19 +21,23 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="MatchWidth">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="CommonEdit" parent="MatchWidth">
         <item name="android:background">@drawable/edit_common</item>
         <item name="android:inputType">text</item>
         <item name="android:textSize">@dimen/textsize_desc</item>
     </style>
+
     <style name="TextBlue" parent="AllWrap">
         <item name="android:textSize">@dimen/textsize_lit</item>
         <item name="android:textColor">@color/textcolor_blue</item>
     </style>
+
     <style name="Nodata_textview">
         <item name="android:gravity">center</item>
         <item name="android:textSize">20sp</item>
@@ -41,15 +45,28 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:visibility">gone</item>
     </style>
-    <style name="BtnPink" >
+
+    <style name="BtnPink">
         <item name="android:layout_height">@dimen/height_title_bar</item>
         <item name="android:background">@drawable/shape_btn_pink</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">@dimen/textsize_lit</item>
         <item name="android:text">获取验证码</item>
     </style>
+
     <style name="BtnCyan" parent="MatchWidth">
         <item name="android:background">@drawable/shape_btn_cyan</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
+
+    <style name="RadioBtn_main" parent="AllWrap">
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/textsize_big</item>
+        <item name="android:textColor">@color/selector_blackpink_textcolor</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">0dp</item>
+        
+    </style>
+
 </resources>

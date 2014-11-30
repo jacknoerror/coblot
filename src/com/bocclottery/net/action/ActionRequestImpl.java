@@ -10,7 +10,7 @@ public interface ActionRequestImpl extends NetConst{
 	
 	public String getApiName();
 	/**
-	 * NetStrategies.finishTheURL(halfwayParamMap(NetStrategies.getBasicParamMapInstance(getApiName())));
+	 * NetStrategies.finishTheURL(halfwayParamMap(NetStrategies.getBasicParamMapInstance(getApiName())))
 	 * @return
 	 */
 	public String toHttpBody();

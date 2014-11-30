@@ -1,9 +1,5 @@
 package com.qfc.yft;
 
-import java.io.IOException;
-import java.net.SocketTimeoutException;
-import java.net.UnknownHostException;
-
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -12,10 +8,18 @@ import android.util.Log;
 
 import com.bocclottery.MyApplication;
 import com.bocclottery.net.NetStrategies;
+import com.bocclottery.net.ActInfoService.ExecuteSurveyInfoActionRequest;
+import com.bocclottery.net.GiftExchangeInfoService.MobileSearchGiftExchangeInfoRequest;
+import com.bocclottery.net.MemberInfoService.MobileSendSmsRequest;
+import com.bocclottery.net.MobileMergeService.GetAllInfoAndAdvertiseRequest;
+import com.bocclottery.net.MobileMergeService.MobileGetParticipateSizeAndExchangeSizeRequest;
+import com.bocclottery.net.MobileMergeService.MobileLoginAndExecuteMemberActionRequest;
+import com.bocclottery.net.PublicGiftService.GetAllActRequest;
 import com.bocclottery.net.action.ActionRequestImpl;
+import com.bocclottery.utils.DesUtils;
+import com.bocclottery.utils.JackRexUtil;
+import com.bocclottery.utils.JackRexUtil.JackReRules;
 import com.bocclottery.utils.JackUtils;
-import com.qfc.yft.util.JackRexUtil;
-import com.qfc.yft.util.JackRexUtil.JackReRules;
 
 public class NetConnectTest extends AndroidTestCase {
 	final String TAG = "UNIT_TEST";
@@ -25,18 +29,34 @@ public class NetConnectTest extends AndroidTestCase {
 		super.setUp();
 	}
 
-	private String test(int apiId) throws SocketTimeoutException,
-			UnknownHostException, IOException {
+	private String test(int apiId) throws Exception {
 		ActionRequestImpl ari = null;
 		String result = null;
-
 		
+//memberId:161050;exchangeId:3200941;actId:2;username:ceshi1;password:123456;realname:测试1;cardNo:3302
 		switch (apiId) {
 		case 0:
-//			ari = new GetProductForMotion1Req(162153);
+//			ari = new MobileAddMemberNewRequest("jack","123456","ccc", "3302", "", result, apiId, result);
+			ari = new GetAllActRequest();//获取所有活动
+			break;
+		case 1:
+			ari = new MobileSearchGiftExchangeInfoRequest(161050, 1, 10);//中奖纪录
+			break;
+		case 2:
+			ari = new MobileSendSmsRequest("ceshi1", "3301", "测试1", MobileSendSmsRequest.SMS_TYPE_REG);
+			break;
+		case 3:
+			ari = new MobileGetParticipateSizeAndExchangeSizeRequest(161050);//根据用户ID查询所中的幸运奖数量和查询中奖数量
+			break;
+		case 4:
+			ari = new GetAllInfoAndAdvertiseRequest();
+			break;
+			
+		case 7:
+			ari = new ExecuteSurveyInfoActionRequest(161050, 50);
 			break;
 		default://login
-//			ari = new PointVerifyForIMReq("ydspipad1", "333333a");
+			ari = new MobileLoginAndExecuteMemberActionRequest("ceshi1", DesUtils.encrypt("123456"), "", 1);//"103E702E0737327C"
 			break;
 		}
 		result = NetStrategies.doHttpRequest(ari.toHttpBody());
@@ -47,15 +67,13 @@ public class NetConnectTest extends AndroidTestCase {
 	}
 
 	/**
-	 * @throws SocketTimeoutException
-	 * @throws UnknownHostException
-	 * @throws IOException
+	 * @throws Exception 
 	 */
-	public void testSayYes() throws SocketTimeoutException,UnknownHostException, IOException {
+	public void testSayYes() throws Exception {
 		String result = "";
-
 		// login:26 ;
-		result = test(3);
+//		result = test(-1); 
+		result = test(7);
 		Log.i(TAG, "result=>" + result);
 		// Log.i(TAG,"mtime2=>"+System.currentTimeMillis());
 		assertTrue(result.contains("true"));
@@ -71,7 +89,6 @@ public class NetConnectTest extends AndroidTestCase {
 		  check = JackRexUtil.checkRE(JackReRules.RE_RULE_A_Z_A_Z0_9_$_SIZE,"12345123456789067890-");
 //	   check = JackRexUtil.checkRE(JackRexUtil.JackReRules.RE_RULE_ONLY_DIGIT, "141");
 	   assertTrue(check); 
-		  
 	  }
 	 
 	public void testRE2(){

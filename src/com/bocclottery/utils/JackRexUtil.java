@@ -1,10 +1,8 @@
-package com.qfc.yft.util;
+package com.bocclottery.utils;
 
 import java.util.regex.Pattern;
 
 import android.widget.EditText;
-
-import com.bocclottery.data.Const;
 
 public class JackRexUtil {
 	public interface JackReRules{
@@ -58,14 +56,14 @@ public class JackRexUtil {
 	public static boolean checkPwdComplex(String string){
 		int complex = 0;
 		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_AZ_LOW, string))	complex+=1;
-		if(JackRexUtil.hasRE(Const.RE_RULE_HAS_AZ, string))	complex+=5;
-		if(JackRexUtil.hasRE(Const.RE_RULE_HAS_DIGIT, string))	complex+=5;
+		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_AZ, string))	complex+=5;
+		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_DIGIT, string))	complex+=5;
 		if(JackRexUtil.checkRE("(\\d.*\\d.*\\d)",string)) complex+=2;
-		if(JackRexUtil.hasRE(Const.RE_RULE_HAS_SPECIAL, string))	complex+=5;
+		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_SPECIAL, string))	complex+=5;
 		if(JackRexUtil.hasRE("([!,@#$%^&*?_~].*[!,@#$%^&*?_~])", string))	complex+=5;
-		if(JackRexUtil.hasRE(Const.RE_RULE_HAS_AZ_BOTH, string))	complex+=2;
+		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_AZ_BOTH, string))	complex+=2;
 		if(JackRexUtil.hasRE("\\d\\D", string))	complex+=2;
-		if(JackRexUtil.hasRE(Const.RE_RULE_HAS_AZ_LOW, string)&&JackRexUtil.hasRE(Const.RE_RULE_HAS_AZ, string)&&JackRexUtil.hasRE(Const.RE_RULE_HAS_DIGIT, string)) complex+=2;
+		if(JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_AZ_LOW, string)&&JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_AZ, string)&&JackRexUtil.hasRE(JackReRules.RE_RULE_HAS_DIGIT, string)) complex+=2;
 		return complex>=10;
 	}
 }

@@ -25,10 +25,6 @@
 	<include 
 	    android:id="@+id/include_set_3"
 	    layout="@layout/layout_linkbar"/>
-	<View style="@style/DividerWH" />
-	<include 
-	    android:id="@+id/include_set_4"
-	    layout="@layout/layout_linkbar"/>
 	
 	
 </LinearLayout>

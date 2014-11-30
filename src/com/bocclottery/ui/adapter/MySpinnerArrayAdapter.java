@@ -3,6 +3,8 @@ package com.bocclottery.ui.adapter;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bocclottery.R;
+
 import android.content.Context;
 import android.widget.ArrayAdapter;
 
@@ -15,7 +17,7 @@ public class MySpinnerArrayAdapter extends ArrayAdapter<String> {
 	List<String> placeList;
 	public MySpinnerArrayAdapter(Context context
 			, List<String> list) {
-		super(context, android.R.layout.simple_spinner_item, new ArrayList<String>());
+		super(context, R.layout.textview_spinner, new ArrayList<String>());
 		setDropDownViewResource(android.R.layout.select_dialog_item);
 		this.placeList = list;
 		for(String p:placeList){

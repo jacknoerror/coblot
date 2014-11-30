@@ -11,7 +11,6 @@ import com.bocclottery.ui.adapter.MySpinnerArrayAdapter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.TextUtils.TruncateAt;
-import android.util.Log;
 import android.view.View;
 import android.widget.Spinner;
 import android.widget.TextView;
